@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+// Decompiled with JetBrains decompiler
 // Type: PointBlank.Auth.Data.Configs.AuthConfig
 // Assembly: PointBlank.Auth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 2F2D71E3-3E87-4155-AA64-E654DA3CFF2D
@@ -14,7 +14,8 @@ namespace PointBlank.Auth.Data.Configs
 {
   public static class AuthConfig
   {
-    public static string authIp;
+    public static string authIp = "0.0.0.0"; // Ou seu IP público
+    public static int authPort = 39190; // Porta padrão do PB
     public static bool isTestMode;
     public static bool Outpost;
     public static bool AUTO_ACCOUNTS;
@@ -25,7 +26,6 @@ namespace PointBlank.Auth.Data.Configs
     public static int maxNickSize;
     public static int minNickSize;
     public static int minTokenSize;
-    public static int authPort;
     public static int serverId;
     public static int maxChannelPlayers;
     public static ulong LauncherKey;
@@ -43,8 +43,6 @@ namespace PointBlank.Auth.Data.Configs
       ConfigFile configFile2 = new ConfigFile("Config/Auth.ini");
       AuthConfig.configId = configFile2.readInt32("ConfigId", 0);
       AuthConfig.serverId = configFile2.readInt32("ServerId", -1);
-      AuthConfig.authIp = configFile2.readString("AuthIp", "127.0.0.1");
-      AuthConfig.authPort = configFile2.readInt32("AuthPort", 39190);
       AuthConfig.syncPort = configFile2.readInt32("SyncPort", 0);
       AuthConfig.AUTO_ACCOUNTS = configFile2.readBoolean("AutoAccounts", false);
       AuthConfig.debugMode = configFile2.readBoolean("Debug", true);
