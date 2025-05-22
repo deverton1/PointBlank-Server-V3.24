@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+// Decompiled with JetBrains decompiler
 // Type: PointBlank.Game.GameManager
 // Assembly: PointBlank.Game, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 9391C126-F6F2-4165-85EA-1FCDF75131C4
@@ -31,7 +31,7 @@ namespace PointBlank.Game
       {
         GameManager.Config = ServerConfigSyncer.GenerateConfig(GameConfig.configId);
         GameManager.mainSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Parse(GameConfig.gameIp), GameConfig.gamePort);
+        IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, GameConfig.gamePort);
         GameManager.mainSocket.Bind((EndPoint) ipEndPoint);
         GameManager.mainSocket.Listen(int.MaxValue);
         GameManager.mainSocket.BeginAccept(new AsyncCallback(GameManager.AcceptCallback), (object) GameManager.mainSocket);
