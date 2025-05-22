@@ -1,0 +1,105 @@
+Consulte o final desta mensagem para obter detalhes sobre como chamar a 
+depuração just-in-time (JIT) em vez desta caixa de diálogo.
+
+************** Texto de Exceção **************
+System.Net.WebException: O nome remoto não pôde ser resolvido: 'pb.genbot.top'
+   em System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   em System.Net.HttpWebRequest.GetRequestStream()
+   em DLqUK5gBUpTTTNwcWlr.kE08fwWOOl(Object , DLqUK5gBUpTTTNwcWlr )
+   em NO_UPDATE.Login.SendRequestLogin(String url, String user, String password)
+   em NO_UPDATE.Login.gviCFW2SBj(Object  , EventArgs  )
+   em System.Windows.Forms.Control.OnClick(EventArgs e)
+   em System.Windows.Forms.Button.OnClick(EventArgs e)
+   em System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   em System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   em System.Windows.Forms.Control.WndProc(Message& m)
+   em System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   em System.Windows.Forms.Button.WndProc(Message& m)
+   em System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   em System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   em System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+
+************** Assemblies Carregados **************
+mscorlib
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9300.0 built by: NET481REL1LAST_C
+    Base de Código: file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/mscorlib.dll
+----------------------------------------
+PBLauncher
+    Versão do Assembly: 1.0.0.0
+    Versão do Win32: 1.0.0.0
+    Base de Código: file:///C:/Users/evert/Downloads/PB-FIRE/PBLauncher.exe
+----------------------------------------
+System.Windows.Forms
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9251.0 built by: NET481REL1LAST_C
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms/v4.0_4.0.0.0__b77a5c561934e089/System.Windows.Forms.dll
+----------------------------------------
+System
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9282.0 built by: NET481REL1LAST_C
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System/v4.0_4.0.0.0__b77a5c561934e089/System.dll
+----------------------------------------
+System.Drawing
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9037.0 built by: NET481REL1
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Drawing/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll
+----------------------------------------
+System.Configuration
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9037.0 built by: NET481REL1
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Configuration/v4.0_4.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll
+----------------------------------------
+System.Core
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9297.0 built by: NET481REL1LAST_C
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Core/v4.0_4.0.0.0__b77a5c561934e089/System.Core.dll
+----------------------------------------
+System.Xml
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9037.0 built by: NET481REL1
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Xml/v4.0_4.0.0.0__b77a5c561934e089/System.Xml.dll
+----------------------------------------
+f4e786cb-316b-41f7-bb53-5e5010efc798
+    Versão do Assembly: 1.0.0.0
+    Versão do Win32: 1.0.0.0
+    Base de Código: file:///C:/Users/evert/Downloads/PB-FIRE/PBLauncher.exe
+----------------------------------------
+Newtonsoft.Json
+    Versão do Assembly: 13.0.0.0
+    Versão do Win32: 13.0.3.27908
+    Base de Código: file:///C:/Users/evert/Downloads/PB-FIRE/Newtonsoft.Json.DLL
+----------------------------------------
+System.resources
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9037.0 built by: NET481REL1
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.resources/v4.0_4.0.0.0_pt-BR_b77a5c561934e089/System.resources.dll
+----------------------------------------
+System.Windows.Forms.resources
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9037.0 built by: NET481REL1
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/System.Windows.Forms.resources/v4.0_4.0.0.0_pt-BR_b77a5c561934e089/System.Windows.Forms.resources.dll
+----------------------------------------
+mscorlib.resources
+    Versão do Assembly: 4.0.0.0
+    Versão do Win32: 4.8.9037.0 built by: NET481REL1
+    Base de Código: file:///C:/WINDOWS/Microsoft.Net/assembly/GAC_MSIL/mscorlib.resources/v4.0_4.0.0.0_pt-BR_b77a5c561934e089/mscorlib.resources.dll
+----------------------------------------
+
+************** Depuração JIT **************
+Para habilitar a depuração just-in-time (JIT), o arquivo .config deste
+aplicativo ou computador (machine.config) deve ter o valor
+jitDebugging definido na seção system.windows.forms.
+O aplicativo também deve ser compilado com a depuração
+habilitada.
+
+Por exemplo:
+
+<configuration>
+    <system.windows.forms jitDebugging="true" />
+</configuration>
+
+Quando a depuração JIT está habilitada, qualquer exceção sem tratamento
+será enviada ao depurador JIT registrado no computador,
+em vez de ser tratada nesta caixa de diálogo.
